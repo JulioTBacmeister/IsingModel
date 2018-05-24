@@ -1,0 +1,57 @@
+[highline:~/RenormGroup] juliob% make isinxn
+gfortran  -c -g -fdollar-ok -fbounds-check -fdefault-real-8 -DGFORTRAN  ising_NxN_drv.F90
+gfortran ising_NxN_partfun.o ising_nxn_drv.o -o isinxn.x
+[highline:~/RenormGroup] juliob% ./isinxn.x
+ T per site=  0.50000000000000000       K1=   2.0000000000000000     
+  Mean ABS magnetization 
+  1:   0.99999977462721035     
+ T per site=   1.0000000000000000       K1=   1.0000000000000000     
+  Mean ABS magnetization 
+  1:   0.99927570921359787     
+ T per site=   1.5000000000000000       K1=  0.66666666666666663     
+  Mean ABS magnetization 
+  1:   0.98641682658713004     
+ T per site=   2.0000000000000000       K1=  0.50000000000000000     
+  Mean ABS magnetization 
+  1:   0.91520918965736531     
+ T per site=   2.5000000000000000       K1=  0.40000000000000002     
+  Mean ABS magnetization 
+  1:   0.71936512989165335     
+ T per site=   3.0000000000000000       K1=  0.33333333333333331     
+  Mean ABS magnetization 
+  1:   0.51887373274123982     
+ T per site=   3.5000000000000000       K1=  0.28571428571428570     
+  Mean ABS magnetization 
+  1:   0.40202015328016094     
+ T per site=   4.0000000000000000       K1=  0.25000000000000000     
+  Mean ABS magnetization 
+  1:   0.33813570964837170     
+ T per site=   4.5000000000000000       K1=  0.22222222222222221     
+  Mean ABS magnetization 
+  1:   0.30008090740982857     
+ T per site=   5.0000000000000000       K1=  0.20000000000000001     
+  Mean ABS magnetization 
+  1:   0.27528577073972388     
+ T per site=   5.5000000000000000       K1=  0.18181818181818182     
+  Mean ABS magnetization 
+  1:   0.25795854481288194     
+ T per site=   6.0000000000000000       K1=  0.16666666666666666     
+  Mean ABS magnetization 
+  1:   0.24519616595456220     
+ T per site=   6.5000000000000000       K1=  0.15384615384615385     
+  Mean ABS magnetization 
+  1:   0.23541271386973603     
+ T per site=   7.0000000000000000       K1=  0.14285714285714285     
+  Mean ABS magnetization 
+  1:   0.22767622099933552     
+ T per site=   7.5000000000000000       K1=  0.13333333333333333     
+  Mean ABS magnetization 
+  1:   0.22140536765410032     
+[highline:~/RenormGroup] juliob% xe full_5x5.txt
+[5] 8841
+[highline:~/RenormGroup] juliob% 
+
+
+IDL> tps=(findgen(15)+1)*.5 
+IDL> mag=[0.999,0.999,0.986,0.915,0.719,0.519,0.402,0.338,0.300,0.275,0.258,0.245,0.235,0.228,0.221]
+IDL> 
